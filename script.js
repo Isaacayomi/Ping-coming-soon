@@ -2,22 +2,26 @@ const inputEl = document.querySelector(".input__field");
 const submitBtn = document.querySelector(".submit__button");
 const errorMsg = document.querySelector(".error__message");
 
-submitBtn.addEventListener("click", function () {
+const submitMail = function () {
   if (inputEl.value.includes(".") && inputEl.value.includes("@")) {
     console.log("Success");
     errorMsg.style.display = "none";
     inputEl.style.border = `1px solid hsl(223, 100%, 88%)`;
-    inputEl.value = ''
-
+    inputEl.value = "";
   } else {
     errorMsg.style.display = "block";
     inputEl.style.border = `1px solid red`;
   }
+};
+
+submitBtn.addEventListener("click", submitMail);
+inputEl.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") submitMail();
 });
 
-inputEl.addEventListener('click', function() {
-    if (errorMsg.style.display = 'block') {
-        errorMsg.style.display = 'none'
-        inputEl.style.border = `1px solid hsl(223, 100%, 88%)`
-    }
-})
+inputEl.addEventListener("click", function () {
+  if ((errorMsg.style.display = "block")) {
+    errorMsg.style.display = "none";
+    inputEl.style.border = `1px solid hsl(223, 100%, 88%)`;
+  }
+});
