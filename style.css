@@ -29,7 +29,7 @@ header img {
 }
 
 main {
-  height: auto;
+  height: 100vh;
   display: grid;
   place-content: center;
 }
@@ -140,4 +140,71 @@ ion-icon:hover {
   text-align: center;
   margin-block: 1.8rem;
   color: var(--secondary_blue);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  main {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+  
+ .fill__email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: -5rem;
+  width: 100%;
+ }
+
+ .fill__email input{
+  cursor: pointer;
+  width: 15rem;
+ }
+
+ .submit__button {
+  cursor: pointer;
+
+  width: 30%;
+  margin-top: 0.5rem;
+ }
+
+ .dashboard__illustration  {
+   max-width: 480px;
+   margin-top: 1rem;
+   margin-bottom: 0;
+ }
+
+ .dashboard__illustration img {
+  width: 100%;
+  height: auto;
+ }
+
+ .socials {
+  margin-top: 1rem;
+ }
+
+ .socials ion-icon {
+  font-size: 13px;
+  padding: 0.4rem;
+ }
+
+ .copyright__text {
+  margin-block: -0.7rem;
+ }
+
+ ion-icon:hover {
+  background-color: var(--primary_blue);
+  color: white;
+  border: none;
+ }
 }
