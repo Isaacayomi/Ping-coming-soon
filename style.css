@@ -173,9 +173,11 @@ ion-icon:hover {
 
  .submit__button {
   cursor: pointer;
-
   width: 30%;
-  margin-top: 0.5rem;
+ }
+
+ .error__message {
+  margin-bottom: 0;
  }
 
  .dashboard__illustration  {

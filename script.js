@@ -5,10 +5,10 @@ const errorMsg = document.querySelector(".error__message");
 const submitMail = function () {
   if (inputEl.value.includes(".") && inputEl.value.includes("@")) {
     console.log("Success");
-    
+
     errorMsg.style.display = "block";
-    errorMsg.textContent = 'Thank you for subscribing!'
-    errorMsg.style.color = 'Green'
+    errorMsg.textContent = "Thank you for subscribing!";
+    errorMsg.style.color = "Green";
     inputEl.style.border = `1px solid green`;
     inputEl.value = "";
   } else if (inputEl.value === "") {
@@ -17,6 +17,7 @@ const submitMail = function () {
   } else {
     errorMsg.innerHTML = "Please provide a valid email address";
     errorMsg.style.display = "block";
+    errorMsg.style.color = "red";
     inputEl.style.border = `1px solid red`;
   }
 };
