@@ -8,7 +8,11 @@ const submitMail = function () {
     errorMsg.style.display = "none";
     inputEl.style.border = `1px solid hsl(223, 100%, 88%)`;
     inputEl.value = "";
+  } else if (inputEl.value === "") {
+    errorMsg.style.display = "block";
+    errorMsg.innerHTML = "Whoops! It looks like you forgot to add your email";
   } else {
+    errorMsg.innerHTML = 'Please provide a valid email address'
     errorMsg.style.display = "block";
     inputEl.style.border = `1px solid red`;
   }

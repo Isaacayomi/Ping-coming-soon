@@ -24,11 +24,12 @@ header img {
   height: auto;
   display: block;
   margin-inline: auto;
+  margin-top: 1rem;
   padding-block: 0.8rem;
 }
 
 main {
-  height: 100vh;
+  height: auto;
   display: grid;
   place-content: center;
 }
@@ -76,10 +77,6 @@ input::placeholder {
 
 input:focus {
   outline: none;
-}
-
-.input__error {
-  border: 1px solid var(--light_red);
 }
 
 .error__message {
